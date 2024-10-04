@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_LamparaConmutada_ST" Id="{efaee198-0ea2-4795-a52e-7df359218c0d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaConmutada_ST
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+    Lampara AT %Q*: BOOL;
+    Pulsador AT %I*: BOOL;
+    
+    Pulsacion: R_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Pulsacion(CLK := Pulsador);
+
+IF Pulsacion.Q THEN
+    Lampara := NOT Lampara;
+END_IF
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

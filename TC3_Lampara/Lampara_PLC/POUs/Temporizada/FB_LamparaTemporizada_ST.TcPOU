@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_LamparaTemporizada_ST" Id="{b5222aad-b922-410a-8bb6-dacdc5c17ccc}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_ST
+VAR_INPUT
+    TiempoEncendido: REAL := 2.0;
+END_VAR
+VAR_OUTPUT
+    TiempoPendiente: REAL;
+END_VAR
+VAR
+    Lampara AT %Q*: BOOL;
+    Pulsador AT %I*: BOOL;
+    
+    Temporizador: Tc2_Standard.TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Temporizador(
+    IN := Lampara, 
+    PT := REAL_TO_TIME(TiempoEncendido*1000)
+    );
+
+IF Pulsador THEN
+    Lampara := TRUE;
+ELSIF Temporizador.Q THEN
+    Lampara := FALSE;
+END_IF
+
+TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET)/1000);
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

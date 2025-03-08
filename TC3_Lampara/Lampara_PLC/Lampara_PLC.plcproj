@@ -24,94 +24,94 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Asignada\FB_LamparaAsignada_IL.TcPOU">
+    <Compile Include="POUs\IL\FB_LamparaAsignada_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Asignada\FB_LamparaAsignada_LD.TcPOU">
+    <Compile Include="POUs\IL\FB_LamparaComputada_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Asignada\FB_LamparaAsignada_SFC_2.TcPOU">
+    <Compile Include="POUs\IL\FB_LamparaConmutada_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Asignada\FB_LamparaAsignada_SFC.TcPOU">
+    <Compile Include="POUs\IL\FB_LamparaIntermitente_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Asignada\FB_LamparaAsignada_ST.TcPOU">
+    <Compile Include="POUs\IL\FB_LamparaMemorizada_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Computada\FB_LamparaComputada_IL.TcPOU">
+    <Compile Include="POUs\IL\FB_LamparaTemporizada_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Computada\FB_LamparaComputada_LD.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaAsignada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Computada\FB_LamparaComputada_SFC.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaComputada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Computada\FB_LamparaComputada_ST.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaConmutada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_IL.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaConmutada_LD_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_LD.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaIntermitente_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_LD_2.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaMemorizada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_SFC.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_SFC_2.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_ST.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_SFC_2.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_ST.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_IL.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_LD.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_SFC.TcPOU">
+    <Compile Include="POUs\LD\FB_LamparaTemporizada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_IL.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaAsignada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_LD.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaAsignada_SFC_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_SFC.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaComputada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_SFC_2.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaConmutada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_ST.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaConmutada_SFC_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Temporizada\FB_LamparaTemporizada_IL.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaIntermitente_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Temporizada\FB_LamparaTemporizada_LD.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaIntermitente_SFC_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Temporizada\FB_LamparaTemporizada_SFC.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaMemorizada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Temporizada\FB_LamparaTemporizada_ST.TcPOU">
+    <Compile Include="POUs\SFC\FB_LamparaMemorizada_SFC_2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\SFC\FB_LamparaTemporizada_SFC.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaAsignada_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaComputada_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaConmutada_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaIntermitente_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaMemorizada_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaTemporizada_ST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Visualization Manager.TcVMO">
@@ -125,12 +125,10 @@
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
-    <Folder Include="POUs\Asignada" />
-    <Folder Include="POUs\Computada" />
-    <Folder Include="POUs\Conmutada" />
-    <Folder Include="POUs\Memorizada" />
-    <Folder Include="POUs\Intermitente" />
-    <Folder Include="POUs\Temporizada" />
+    <Folder Include="POUs\IL" />
+    <Folder Include="POUs\LD" />
+    <Folder Include="POUs\SFC" />
+    <Folder Include="POUs\ST" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>

@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_LamparaAsignada_IL" Id="{5a96d4c2-e6d2-4803-a3d9-e8de5affe615}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaAsignada_IL
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_LamparaMemorizada_IL" Id="{cb55df0a-4d38-47ba-9d76-11d64b3ed990}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaMemorizada_IL
 VAR_INPUT
 END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
     Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;
+    PulsadorConexion AT %I*: BOOL;
+    PulsadorDesconexion AT %I*: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -28,7 +29,7 @@ END_VAR
                       <v n="Operator">"LD"</v>
                       <v n="Prefix">""</v>
                       <o n="Operand" t="Operand">
-                        <v n="Operand">"Pulsador"</v>
+                        <v n="Operand">"PulsadorConexion"</v>
                         <v n="Type">"BOOL"</v>
                         <v n="Comment">""</v>
                         <v n="SymbolComment">""</v>
@@ -41,13 +42,13 @@ END_VAR
                         <v n="LValue">false</v>
                         <v n="Boolean">false</v>
                         <v n="IsInstance">false</v>
-                        <v n="Id">22L</v>
+                        <v n="Id">11L</v>
                       </o>
                       <v n="Postfix">""</v>
-                      <v n="Id">21L</v>
+                      <v n="Id">10L</v>
                     </o>
                     <o>
-                      <v n="Operator">"ST"</v>
+                      <v n="Operator">"S"</v>
                       <v n="Prefix">""</v>
                       <o n="Operand" t="Operand">
                         <v n="Operand">"Lampara"</v>
@@ -63,10 +64,54 @@ END_VAR
                         <v n="LValue">false</v>
                         <v n="Boolean">false</v>
                         <v n="IsInstance">false</v>
-                        <v n="Id">24L</v>
+                        <v n="Id">16L</v>
                       </o>
                       <v n="Postfix">""</v>
-                      <v n="Id">23L</v>
+                      <v n="Id">15L</v>
+                    </o>
+                    <o>
+                      <v n="Operator">"LD"</v>
+                      <v n="Prefix">""</v>
+                      <o n="Operand" t="Operand">
+                        <v n="Operand">"PulsadorDesconexion"</v>
+                        <v n="Type">"BOOL"</v>
+                        <v n="Comment">""</v>
+                        <v n="SymbolComment">""</v>
+                        <v n="Address">""</v>
+                        <o n="Flags" t="Flags">
+                          <v n="Flags">0</v>
+                          <v n="Fixed">false</v>
+                          <v n="Extensible">false</v>
+                        </o>
+                        <v n="LValue">false</v>
+                        <v n="Boolean">false</v>
+                        <v n="IsInstance">false</v>
+                        <v n="Id">18L</v>
+                      </o>
+                      <v n="Postfix">""</v>
+                      <v n="Id">17L</v>
+                    </o>
+                    <o>
+                      <v n="Operator">"R"</v>
+                      <v n="Prefix">""</v>
+                      <o n="Operand" t="Operand">
+                        <v n="Operand">"Lampara"</v>
+                        <v n="Type">"BOOL"</v>
+                        <v n="Comment">""</v>
+                        <v n="SymbolComment">""</v>
+                        <v n="Address">""</v>
+                        <o n="Flags" t="Flags">
+                          <v n="Flags">0</v>
+                          <v n="Fixed">false</v>
+                          <v n="Extensible">false</v>
+                        </o>
+                        <v n="LValue">false</v>
+                        <v n="Boolean">false</v>
+                        <v n="IsInstance">false</v>
+                        <v n="Id">20L</v>
+                      </o>
+                      <v n="Postfix">""</v>
+                      <v n="Id">19L</v>
                     </o>
                   </l2>
                   <v n="Comment">""</v>
@@ -75,7 +120,7 @@ END_VAR
                   <v n="OutCommented">false</v>
                   <l2 n="NetworkItems" />
                   <l2 n="Connectors" />
-                  <v n="Id">20L</v>
+                  <v n="Id">9L</v>
                 </o>
               </l2>
               <v n="BranchCounter">0</v>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaTemporizada_LD" Id="{424061ba-8d78-48c7-b4ae-26f15978acd8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_LD
 VAR_INPUT
@@ -13,8 +13,8 @@ VAR
     Pulsador AT %I*: BOOL;
     
     Temporizador: TON;
+
     Memoria: RS;
-    
     Resultado: REAL;
     Tiempo: TIME;
 END_VAR

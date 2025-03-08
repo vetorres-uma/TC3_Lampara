@@ -30,6 +30,9 @@
     <Compile Include="POUs\Asignada\FB_LamparaAsignada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Asignada\FB_LamparaAsignada_SFC_2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\Asignada\FB_LamparaAsignada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -54,10 +57,19 @@
     <Compile Include="POUs\Conmutada\FB_LamparaConmutada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_LD_2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\Conmutada\FB_LamparaConmutada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Conmutada\FB_LamparaConmutada_SFC_2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\Conmutada\FB_LamparaConmutada_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_SFC_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Intermitente\FB_LamparaIntermitente_ST.TcPOU">
@@ -84,10 +96,10 @@
     <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_ST.TcPOU">
+    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_SFC_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Pulsada\Pulsada.TcPOU">
+    <Compile Include="POUs\Memorizada\FB_LamparaMemorizada_ST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Temporizada\FB_LamparaTemporizada_IL.TcPOU">
@@ -102,12 +114,12 @@
     <Compile Include="POUs\Temporizada\FB_LamparaTemporizada_ST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\VISUs\Visualization.TcVIS">
-      <SubType>Code</SubType>
-      <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
-    </Compile>
     <Compile Include="Visualization Manager.TcVMO">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VISUs\Visualization.TcVIS">
+      <SubType>Code</SubType>
+      <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -118,9 +130,7 @@
     <Folder Include="POUs\Conmutada" />
     <Folder Include="POUs\Memorizada" />
     <Folder Include="POUs\Intermitente" />
-    <Folder Include="POUs\Pulsada" />
     <Folder Include="POUs\Temporizada" />
-    <Folder Include="POUs\VISUs" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaMemorizada_LD" Id="{3b068606-e4ed-4fff-8c23-37f5b0fb622b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaMemorizada_LD
 VAR_INPUT
@@ -62,7 +62,7 @@ END_VAR
                         <v n="BoxType">"RS"</v>
                         <o n="Instance" t="Operand">
                           <v n="Operand">"Memoria"</v>
-                          <v n="Type">"Tc2_Standard.RS"</v>
+                          <v n="Type">"RS"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
                           <v n="Address">""</v>

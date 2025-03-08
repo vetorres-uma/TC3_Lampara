@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaMemorizada_ST" Id="{0354aed3-5461-4991-a04b-d00e3b16aefe}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaMemorizada_ST
 VAR_INPUT
@@ -14,7 +14,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF PulsadorDesconexion THEN
-    Lampara := FALSE
+    Lampara := FALSE;
 ELSIF PulsadorConexion THEN
     Lampara := TRUE;
 END_IF]]></ST>

@@ -2,14 +2,16 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="MAIN" Id="{f4259ffe-1174-43f5-b5e0-a37a269528be}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
-(*
-- Lampara asignada - la lampara "copia" el estado del pulsador
-- Lampara memoriazada - un pulsador enciende la lampara y otro la apaga
-- Lampara conmutada - el mismo pulsador enciende y apaga la lampara
-- Lampara temporizada - la lampara se apaga transcurrido un cierto tiempo
-    despues de accionar el pulsador
-- Lampara computada - lampara temporizada con un numero maximo de maniobras
-*)
+// LAMPARA
+//
+// 1. Lampara asignada - la lampara "copia" el estado del pulsador
+// 2. Lampara memoriazada - un pulsador enciende la lampara y otro la apaga
+// 3. Lampara conmutada - el mismo pulsador enciende y apaga la lampara
+// 4. Lampara temporizada - la lampara se apaga transcurrido un cierto tiempo
+//   despues de accionar el pulsador
+// 5. Lampara intermitente - la lampara parpadea
+// 6. Lampara computada - lampara temporizada con un numero maximo de maniobras
+
 VAR
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
@@ -18,29 +20,29 @@ VAR
 //    LamparaMemorizada: FB_LamparaMemorizada_IL;
 //    LamparaConmutada: FB_LamparaConmutada_IL;
 //    LamparaTemporizada: FB_LamparaTemporizada_IL;
-//    LamparaComputada: FB_LamparaComputada_IL;
 //    LamparaIntermitente: FB_LamparaIntermitente_IL;
+//    LamparaComputada: FB_LamparaComputada_IL;
 
 //    LamparaAsignada: FB_LamparaAsignada_LD;
 //    LamparaMemorizada: FB_LamparaMemorizada_LD;
 //    LamparaConmutada: FB_LamparaConmutada_LD;
 //    LamparaTemporizada: FB_LamparaTemporizada_LD;
-//    LamparaComputada: FB_LamparaComputada_LD;
 //    LamparaIntermitente: FB_LamparaIntermitente_LD;
+//    LamparaComputada: FB_LamparaComputada_LD;
     
-//    LamparaAsignada: FB_LamparaAsignada_ST;
-//    LamparaMemorizada: FB_LamparaMemorizada_ST;
-//    LamparaConmutada: FB_LamparaConmutada_ST;
-//    LamparaTemporizada: FB_LamparaTemporizada_ST;
-//    LamparaComputada: FB_LamparaComputada_ST;
-//    LamparaIntermitente: FB_LamparaIntermitente_ST;
+    LamparaAsignada: FB_LamparaAsignada_ST;
+    LamparaMemorizada: FB_LamparaMemorizada_ST;
+    LamparaConmutada: FB_LamparaConmutada_ST;
+    LamparaTemporizada: FB_LamparaTemporizada_ST;
+    LamparaIntermitente: FB_LamparaIntermitente_ST;
+    LamparaComputada: FB_LamparaComputada_ST;
 
-    LamparaAsignada: FB_LamparaAsignada_SFC;
-    LamparaMemorizada: FB_LamparaMemorizada_SFC;
-    LamparaConmutada: FB_LamparaConmutada_SFC;
-    LamparaTemporizada: FB_LamparaTemporizada_SFC;
-    LamparaComputada: FB_LamparaComputada_SFC; 
-    LamparaIntermitente: FB_LamparaIntermitente_SFC;   
+//    LamparaAsignada: FB_LamparaAsignada_SFC;
+//    LamparaMemorizada: FB_LamparaMemorizada_SFC;
+//    LamparaConmutada: FB_LamparaConmutada_SFC;
+//    LamparaTemporizada: FB_LamparaTemporizada_SFC;
+//    LamparaIntermitente: FB_LamparaIntermitente_SFC;   
+//    LamparaComputada: FB_LamparaComputada_SFC; 
 END_VAR
 
 ]]></Declaration>

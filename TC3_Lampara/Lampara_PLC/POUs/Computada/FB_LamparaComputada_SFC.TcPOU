@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaComputada_SFC" Id="{5017c17c-8705-42a3-821d-8ab471c59e55}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaComputada_SFC
 VAR_INPUT
-    Reinicia: BOOL;
+    ReiniciaContador: BOOL;
     ManiobrasTotales: UINT := 2;
     TiempoEncendido: REAL := 2.0;
 END_VAR
 VAR_OUTPUT
-    Habilitada: BOOL;
-    ManiobrasPendientes: UINT;
+    LamparaHabilitada: BOOL;
+    ManiobrasPendientes: UINT := ManiobrasTotales;
     TiempoPendiente: REAL;
 END_VAR
 VAR
@@ -33,114 +33,7 @@ END_VAR
                       <l2 n="EmbeddedEntryActionProperties" />
                       <l2 n="EmbeddedExitActionProperties" />
                       <o n="ElementList" t="SFCElementList">
-                        <l2 n="InnerList" cet="SFCActionAssociation">
-                          <o>
-                            <l2 n="Attributes" cet="SFCAttribute">
-                              <o>
-                                <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">"aReinicia"</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">251L</v>
-                                <v n="IdParent">250L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{7d894980-aeea-405c-a0f6-e2b26429c58f}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">""</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">252L</v>
-                                <v n="IdParent">250L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{01580b27-6378-448b-8ecb-0e4b795b58d6}</v>
-                                <o n="Value" t="BoolValue">
-                                  <v n="Value">"FALSE"</v>
-                                  <v n="DefaultValue">"FALSE"</v>
-                                </o>
-                                <v n="Id">253L</v>
-                                <v n="IdParent">250L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{bc882c11-1e91-4dd8-a6b8-2075724ed18b}</v>
-                                <o n="Value" t="EnumValue">
-                                  <v n="TemplateGuid">{79a4fdd5-c859-4de4-aa8d-c03372c880c2}</v>
-                                  <n n="BaseType" />
-                                  <v n="Value">"0"</v>
-                                  <v n="DefaultValue">"0"</v>
-                                </o>
-                                <v n="Id">254L</v>
-                                <v n="IdParent">250L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{e174fc0d-80b0-4a9e-a530-ca239c249a50}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">"N"</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">255L</v>
-                                <v n="IdParent">250L</v>
-                              </o>
-                            </l2>
-                            <v n="Id">250L</v>
-                            <v n="IdParent">10L</v>
-                          </o>
-                          <o>
-                            <l2 n="Attributes" cet="SFCAttribute">
-                              <o>
-                                <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">"aHabilitada"</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">275L</v>
-                                <v n="IdParent">274L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{7d894980-aeea-405c-a0f6-e2b26429c58f}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">""</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">276L</v>
-                                <v n="IdParent">274L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{01580b27-6378-448b-8ecb-0e4b795b58d6}</v>
-                                <o n="Value" t="BoolValue">
-                                  <v n="Value">"FALSE"</v>
-                                  <v n="DefaultValue">"FALSE"</v>
-                                </o>
-                                <v n="Id">277L</v>
-                                <v n="IdParent">274L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{bc882c11-1e91-4dd8-a6b8-2075724ed18b}</v>
-                                <o n="Value" t="EnumValue">
-                                  <v n="TemplateGuid">{79a4fdd5-c859-4de4-aa8d-c03372c880c2}</v>
-                                  <n n="BaseType" />
-                                  <v n="Value">"0"</v>
-                                  <v n="DefaultValue">"0"</v>
-                                </o>
-                                <v n="Id">278L</v>
-                                <v n="IdParent">274L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{e174fc0d-80b0-4a9e-a530-ca239c249a50}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">"N"</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">279L</v>
-                                <v n="IdParent">274L</v>
-                              </o>
-                            </l2>
-                            <v n="Id">274L</v>
-                            <v n="IdParent">10L</v>
-                          </o>
-                        </l2>
+                        <l2 n="InnerList" />
                       </o>
                       <l2 n="Attributes" cet="SFCAttribute">
                         <o>
@@ -220,7 +113,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">""</v>
+                            <v n="Value">"S0_active"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">19L</v>
@@ -256,7 +149,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"Habilitada AND Pulsador"</v>
+                            <v n="Value">"LamparaHabilitada AND Pulsador"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">206L</v>
@@ -377,59 +270,6 @@ END_VAR
                             <v n="Id">63L</v>
                             <v n="IdParent">33L</v>
                           </o>
-                          <o>
-                            <l2 n="Attributes" cet="SFCAttribute">
-                              <o>
-                                <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">"aTiempoRestante"</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">70L</v>
-                                <v n="IdParent">69L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{7d894980-aeea-405c-a0f6-e2b26429c58f}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">""</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">71L</v>
-                                <v n="IdParent">69L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{01580b27-6378-448b-8ecb-0e4b795b58d6}</v>
-                                <o n="Value" t="BoolValue">
-                                  <v n="Value">"FALSE"</v>
-                                  <v n="DefaultValue">"FALSE"</v>
-                                </o>
-                                <v n="Id">72L</v>
-                                <v n="IdParent">69L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{bc882c11-1e91-4dd8-a6b8-2075724ed18b}</v>
-                                <o n="Value" t="EnumValue">
-                                  <v n="TemplateGuid">{79a4fdd5-c859-4de4-aa8d-c03372c880c2}</v>
-                                  <n n="BaseType" />
-                                  <v n="Value">"0"</v>
-                                  <v n="DefaultValue">"0"</v>
-                                </o>
-                                <v n="Id">73L</v>
-                                <v n="IdParent">69L</v>
-                              </o>
-                              <o>
-                                <v n="AttributeId">{e174fc0d-80b0-4a9e-a530-ca239c249a50}</v>
-                                <o n="Value" t="StringValue">
-                                  <v n="Value">"N"</v>
-                                  <v n="DefaultValue">""</v>
-                                </o>
-                                <v n="Id">74L</v>
-                                <v n="IdParent">69L</v>
-                              </o>
-                            </l2>
-                            <v n="Id">69L</v>
-                            <v n="IdParent">33L</v>
-                          </o>
                         </l2>
                       </o>
                       <l2 n="Attributes" cet="SFCAttribute">
@@ -510,7 +350,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">""</v>
+                            <v n="Value">"S1_active"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">42L</v>
@@ -959,23 +799,20 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="aHabilitada" Id="{a7380a84-6edc-4663-9bd0-af2988d62af8}">
+    <Action Name="S0_active" Id="{2e47c035-9f95-4cbc-94d9-bf2b2c727cb0}">
       <Implementation>
-        <ST><![CDATA[Habilitada := (ManiobrasPendientes > 0);
+        <ST><![CDATA[LamparaHabilitada := (ManiobrasPendientes > 0);
+
+IF ReiniciaContador THEN 
+    ManiobrasPendientes := ManiobrasTotales;
+END_IF
+
 ]]></ST>
       </Implementation>
     </Action>
-    <Action Name="aReinicia" Id="{ab013577-6fa2-4f40-b6c5-65b06de3de73}">
-      <Implementation>
-        <ST><![CDATA[IF Reinicia THEN 
-    ManiobrasPendientes := ManiobrasTotales;
-END_IF]]></ST>
-      </Implementation>
-    </Action>
-    <Action Name="aTiempoRestante" Id="{34944caa-a0bd-4fe1-8b61-1b009cfbfbc5}">
+    <Action Name="S1_active" Id="{e8a42836-b0a7-434d-b652-4e5ec8b982ff}">
       <Implementation>
         <ST><![CDATA[TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(S1.t)/1000);
-
 ]]></ST>
       </Implementation>
     </Action>

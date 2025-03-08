@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaComputada_ST" Id="{2c52e490-02c0-48e6-8c38-6edb0e27b45e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaComputada_ST
 VAR_INPUT
-    Reinicia: BOOL;
+    ReiniciaContador: BOOL;
     ManiobrasTotales: UINT := 2;
     TiempoEncendido: REAL := 2.0;
 END_VAR
 VAR_OUTPUT
-    Habilitada: BOOL;
+    LamparaHabilitada: BOOL;
     ManiobrasPendientes: UINT;
     TiempoPendiente: REAL;
 END_VAR
@@ -16,31 +16,32 @@ VAR
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
     
-    Contador: CTD;
+    Contador: CTD := (CV := ManiobrasTotales);
     Temporizador: TON;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[Contador(
+      <ST><![CDATA[LamparaHabilitada := NOT Contador.Q;
+
+Contador(
     CD := Lampara,
-    LOAD := Reinicia,
+    LOAD := ReiniciaContador,
     PV := ManiobrasTotales,
     CV => ManiobrasPendientes,
     );
 
 Temporizador(
     IN := Lampara, 
-    PT := REAL_TO_TIME(TiempoEncendido*1000)
+    PT := REAL_TO_TIME(TiempoEncendido * 1000)
     );
 
-IF (NOT Contador.Q AND Pulsador) THEN
+IF (LamparaHabilitada AND Pulsador) THEN
     Lampara := TRUE;
 ELSIF Temporizador.Q THEN
     Lampara := FALSE;
 END_IF
 
-Habilitada := NOT Contador.Q;
-TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET)/1000);
+TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET) / 1000);
 
     
 ]]></ST>

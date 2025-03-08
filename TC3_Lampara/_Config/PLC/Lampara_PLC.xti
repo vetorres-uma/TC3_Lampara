@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.65" ClassName="CNestedPlcProjDef">
 	<Project GUID="{6AF93218-37CE-491B-89C2-C70C41C02EC1}" Name="Lampara_PLC" PrjFilePath="..\..\Lampara_PLC\Lampara_PLC.plcproj" TmcFilePath="..\..\Lampara_PLC\Lampara_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Lampara_PLC\Lampara_PLC.tmc" TmcHash="{CF504B5F-6516-8401-ED6E-EC83C845A12A}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Lampara_PLC\Lampara_PLC.tmc" TmcHash="{4EF9D554-E454-EDE5-11C6-F697EBAE3AE0}">
 			<Name>Lampara_PLC Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -58,11 +58,11 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.LamparaComputada.Lampara</Name>
+					<Name>MAIN.LamparaIntermitente.Lampara</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.LamparaIntermitente.Lampara</Name>
+					<Name>MAIN.LamparaComputada.Lampara</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>

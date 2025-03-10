@@ -42,6 +42,9 @@
     <Compile Include="POUs\IL\FB_LamparaTemporizada_IL.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\IL\FB_LamparaTemporizada_IL_2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\LD\FB_LamparaAsignada_LD.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\LD\FB_LamparaTemporizada_LD.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LD\FB_LamparaTemporizada_LD_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
@@ -96,6 +102,9 @@
     <Compile Include="POUs\SFC\FB_LamparaTemporizada_SFC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\SFC\FB_LamparaTemporizada_SFC_2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\ST\FB_LamparaAsignada_ST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -112,6 +121,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\ST\FB_LamparaTemporizada_ST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ST\FB_LamparaTemporizada_ST_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Visualization Manager.TcVMO">

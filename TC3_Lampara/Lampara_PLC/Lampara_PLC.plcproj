@@ -126,6 +126,9 @@
     <Compile Include="POUs\ST\FB_LamparaTemporizada_ST_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\ST\FB_LamparaTemporizada_ST_3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Visualization Manager.TcVMO">
       <SubType>Code</SubType>
     </Compile>

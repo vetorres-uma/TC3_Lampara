@@ -13,17 +13,15 @@ VAR_OUTPUT
     TiempoPendiente: REAL;
 END_VAR
 VAR
-    Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;
-    
     Contador: CTD := (CV := ManiobrasTotales);
     Temporizador: TON;
+
+    Lampara AT %Q*: BOOL;
+    Pulsador AT %I*: BOOL;    
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[LamparaHabilitada := NOT Contador.Q;
-
-Contador(
+      <ST><![CDATA[Contador(
     CD := Lampara,
     LOAD := ReiniciaContador,
     PV := ManiobrasTotales,
@@ -35,6 +33,8 @@ Temporizador(
     PT := REAL_TO_TIME(TiempoEncendido * 1000)
     );
 
+LamparaHabilitada := NOT Contador.Q;
+
 IF (LamparaHabilitada AND Pulsador) THEN
     Lampara := TRUE;
 ELSIF Temporizador.Q THEN
@@ -42,8 +42,6 @@ ELSIF Temporizador.Q THEN
 END_IF
 
 TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET) / 1000);
-
-    
 ]]></ST>
     </Implementation>
   </POU>

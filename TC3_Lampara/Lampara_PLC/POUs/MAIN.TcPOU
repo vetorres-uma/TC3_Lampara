@@ -33,7 +33,7 @@ VAR
     LamparaAsignada: FB_LamparaAsignada_ST;
     LamparaMemorizada: FB_LamparaMemorizada_ST;
     LamparaConmutada: FB_LamparaConmutada_ST;
-    LamparaTemporizada: FB_LamparaTemporizada_ST;
+    LamparaTemporizada: FB_LamparaTemporizada_ST_3;
     LamparaIntermitente: FB_LamparaIntermitente_ST;
     LamparaComputada: FB_LamparaComputada_ST;
 

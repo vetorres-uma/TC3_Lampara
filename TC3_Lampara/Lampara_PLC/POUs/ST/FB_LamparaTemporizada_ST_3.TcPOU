@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_LamparaTemporizada_ST_3" Id="{c1283d34-5b8a-4b7a-8b47-f80d4ecd735c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_ST_3
+// Lampara temporizada con tiempo prolongado con incremento variable
+VAR_INPUT
+    TiempoEncendido: REAL := 2.0;
+    IncrementoTiempo: REAL := 1;
+END_VAR
+VAR_OUTPUT
+    TiempoPendiente: REAL;
+END_VAR
+VAR
+    Temporizador: TON;
+    FlancoPulsador: R_TRIG;
+
+    Lampara AT %Q*: BOOL;
+    Pulsador AT %I*: BOOL;
+    TiempoActual: REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FlancoPulsador(CLK := Pulsador);
+
+Temporizador(
+    IN := Lampara AND NOT Pulsador, 
+    PT := REAL_TO_TIME(TiempoActual * 1000)
+    );
+
+IF (Lampara AND FlancoPulsador.Q) THEN
+    TiempoActual := TiempoActual + IncrementoTiempo;
+ELSIF (NOT Lampara AND FlancoPulsador.Q) THEN
+    TiempoActual := TiempoEncendido;    
+END_IF
+
+IF Pulsador THEN
+    Lampara := TRUE;
+ELSIF Temporizador.Q THEN
+    Lampara := FALSE;
+END_IF
+
+TiempoPendiente := TiempoActual - (TIME_TO_REAL(Temporizador.ET) / 1000);
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

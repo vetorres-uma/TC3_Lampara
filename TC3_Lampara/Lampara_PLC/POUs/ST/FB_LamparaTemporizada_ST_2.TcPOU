@@ -2,6 +2,7 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaTemporizada_ST_2" Id="{033bbd56-349d-47bb-bf26-46350591f1cb}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_ST_2
+// Lampara temporizada con tiempo de espera prolongado
 VAR_INPUT
     TiempoEncendido: REAL := 2.0;
 END_VAR
@@ -9,10 +10,10 @@ VAR_OUTPUT
     TiempoPendiente: REAL;
 END_VAR
 VAR
+    Temporizador: TON;
+
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
-    
-    Temporizador: TON;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -28,7 +29,6 @@ ELSIF Temporizador.Q THEN
 END_IF
 
 TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET) / 1000);
-
 ]]></ST>
     </Implementation>
   </POU>

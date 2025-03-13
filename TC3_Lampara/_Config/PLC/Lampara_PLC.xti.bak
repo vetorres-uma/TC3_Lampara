@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.65" ClassName="CNestedPlcProjDef">
 	<Project GUID="{6AF93218-37CE-491B-89C2-C70C41C02EC1}" Name="Lampara_PLC" PrjFilePath="..\..\Lampara_PLC\Lampara_PLC.plcproj" TmcFilePath="..\..\Lampara_PLC\Lampara_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Lampara_PLC\Lampara_PLC.tmc" TmcHash="{A4AB931D-8E5A-44FE-19A5-DCCA8AB8E4DC}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Lampara_PLC\Lampara_PLC.tmc" TmcHash="{CE72C6E7-FB26-36DE-68FF-CE67892CED44}">
 			<Name>Lampara_PLC Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">

@@ -9,16 +9,16 @@ VAR_OUTPUT
     TiempoPendiente: REAL;
 END_VAR
 VAR
+    Temporizador: TON;
+
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
-    
-    Temporizador: TON;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Temporizador(
     IN := Lampara, 
-    PT := REAL_TO_TIME(TiempoEncendido*1000)
+    PT := REAL_TO_TIME(TiempoEncendido * 1000)
     );
 
 IF Pulsador THEN
@@ -27,8 +27,7 @@ ELSIF Temporizador.Q THEN
     Lampara := FALSE;
 END_IF
 
-TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET)/1000);
-
+TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(Temporizador.ET) / 1000);
 ]]></ST>
     </Implementation>
   </POU>

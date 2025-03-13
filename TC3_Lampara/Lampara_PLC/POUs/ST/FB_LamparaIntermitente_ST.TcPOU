@@ -8,9 +8,9 @@ END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
-    Lampara AT %Q*: BOOL;
-
     Temporizador: TON;
+
+    Lampara AT %Q*: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -21,7 +21,8 @@ END_VAR
 
 IF Temporizador.Q THEN
     Lampara := NOT Lampara;
-END_IF    ]]></ST>
+END_IF    
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

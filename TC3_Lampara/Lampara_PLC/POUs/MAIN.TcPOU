@@ -8,9 +8,10 @@
 // 2. Lampara memoriazada - un pulsador enciende la lampara y otro la apaga
 // 3. Lampara conmutada - el mismo pulsador enciende y apaga la lampara
 // 4. Lampara temporizada - la lampara se apaga transcurrido un cierto tiempo
-//   despues de accionar el pulsador
+//    despues de accionar el pulsador
 // 5. Lampara intermitente - la lampara parpadea
-// 6. Lampara computada - lampara temporizada con un numero maximo de maniobras
+// 6. Lampara computada - la lampara se enciende tras accionar varias veces el 
+//    pulsador y se apaga al accionar el pulsador de reinicio
 
 VAR
     Lampara AT %Q*: BOOL;

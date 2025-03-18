@@ -5,6 +5,7 @@
 // Lampara temporizada con tiempo de espera prolongado
 VAR_INPUT
     TiempoEncendido: REAL := 2.0;
+    IncrementoTiempo: REAL := 1;
 END_VAR
 VAR_OUTPUT
     TiempoPendiente: REAL;

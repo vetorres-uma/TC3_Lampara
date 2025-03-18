@@ -7,11 +7,11 @@ END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
+    Memoria: RS;
+    
     Lampara AT %Q*: BOOL;
     PulsadorConexion AT %I*: BOOL;
-    PulsadorDesconexion AT %I*: BOOL;
-    
-    Memoria: RS;
+    PulsadorDesconexion AT %I*: BOOL;    
 END_VAR
 ]]></Declaration>
     <Implementation>

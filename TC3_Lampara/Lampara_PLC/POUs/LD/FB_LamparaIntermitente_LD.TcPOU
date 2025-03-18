@@ -8,12 +8,12 @@ END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
-    Lampara AT %Q*: BOOL;
-    
     Temporizador: TON;
     
     Resultado: REAL;
     Tiempo: TIME;
+
+    Lampara AT %Q*: BOOL;
 END_VAR
 
 ]]></Declaration>

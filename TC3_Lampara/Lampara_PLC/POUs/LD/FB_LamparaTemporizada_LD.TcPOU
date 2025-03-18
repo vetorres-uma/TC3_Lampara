@@ -4,19 +4,20 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_LD
 VAR_INPUT
     TiempoEncendido: REAL := 2.0;
+    IncrementoTiempo: REAL := 1;    
 END_VAR
 VAR_OUTPUT
     TiempoPendiente: REAL;
 END_VAR
 VAR
-    Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;
-    
     Temporizador: TON;
 
     Memoria: RS;
     Resultado: REAL;
     Tiempo: TIME;
+    
+    Lampara AT %Q*: BOOL;
+    Pulsador AT %I*: BOOL;    
 END_VAR
 
 ]]></Declaration>

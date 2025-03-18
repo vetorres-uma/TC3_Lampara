@@ -4,6 +4,7 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_ST
 VAR_INPUT
     TiempoEncendido: REAL := 2.0;
+    IncrementoTiempo: REAL := 1;
 END_VAR
 VAR_OUTPUT
     TiempoPendiente: REAL;

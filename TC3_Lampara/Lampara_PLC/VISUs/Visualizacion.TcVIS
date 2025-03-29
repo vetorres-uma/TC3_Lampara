@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
-  <Visu Name="Visualization" Id="{9c96670d-5611-45f7-b475-36643b25dd97}">
+  <Visu Name="Visualizacion" Id="{9c96670d-5611-45f7-b475-36643b25dd97}">
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"7"</v>
+          <v n="UniqueIdGenerator">"9"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -5676,11 +5676,11 @@
                     </o>
                     <o>
                       <v n="Id">1649127785L</v>
-                      <v n="Value">330</v>
+                      <v n="Value">10</v>
                     </o>
                     <o>
                       <v n="Id">357335551L</v>
-                      <v n="Value">250</v>
+                      <v n="Value">570</v>
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
@@ -5711,11 +5711,11 @@
                     </o>
                     <o>
                       <v n="Id">550940142L</v>
-                      <v n="Value">480</v>
+                      <v n="Value">160</v>
                     </o>
                     <o>
                       <v n="Id">1473355128L</v>
-                      <v n="Value">280</v>
+                      <v n="Value">600</v>
                     </o>
                     <o>
                       <v n="Id">2678395525L</v>
@@ -5828,11 +5828,11 @@
                     </o>
                     <o>
                       <v n="Id">1649127785L</v>
-                      <v n="Value">340</v>
+                      <v n="Value">20</v>
                     </o>
                     <o>
                       <v n="Id">357335551L</v>
-                      <v n="Value">260</v>
+                      <v n="Value">580</v>
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
@@ -5859,11 +5859,11 @@
                     </o>
                     <o>
                       <v n="Id">550940142L</v>
-                      <v n="Value">385</v>
+                      <v n="Value">65</v>
                     </o>
                     <o>
                       <v n="Id">1473355128L</v>
-                      <v n="Value">277</v>
+                      <v n="Value">597</v>
                     </o>
                     <o>
                       <v n="Id">2678395525L</v>
@@ -5986,11 +5986,11 @@
                     </o>
                     <o>
                       <v n="Id">1649127785L</v>
-                      <v n="Value">330</v>
+                      <v n="Value">10</v>
                     </o>
                     <o>
                       <v n="Id">357335551L</v>
-                      <v n="Value">220</v>
+                      <v n="Value">540</v>
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
@@ -6017,11 +6017,11 @@
                     </o>
                     <o>
                       <v n="Id">550940142L</v>
-                      <v n="Value">480</v>
+                      <v n="Value">160</v>
                     </o>
                     <o>
                       <v n="Id">1473355128L</v>
-                      <v n="Value">235</v>
+                      <v n="Value">555</v>
                     </o>
                     <o>
                       <v n="Id">2678395525L</v>
@@ -6144,11 +6144,11 @@
                     </o>
                     <o>
                       <v n="Id">1649127785L</v>
-                      <v n="Value">440</v>
+                      <v n="Value">120</v>
                     </o>
                     <o>
                       <v n="Id">357335551L</v>
-                      <v n="Value">260</v>
+                      <v n="Value">580</v>
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
@@ -6175,11 +6175,11 @@
                     </o>
                     <o>
                       <v n="Id">550940142L</v>
-                      <v n="Value">485</v>
+                      <v n="Value">165</v>
                     </o>
                     <o>
                       <v n="Id">1473355128L</v>
-                      <v n="Value">280</v>
+                      <v n="Value">600</v>
                     </o>
                     <o>
                       <v n="Id">2678395525L</v>
@@ -6305,11 +6305,11 @@
                     </o>
                     <o>
                       <v n="Id">1649127785L</v>
-                      <v n="Value">530</v>
+                      <v n="Value">210</v>
                     </o>
                     <o>
                       <v n="Id">357335551L</v>
-                      <v n="Value">260</v>
+                      <v n="Value">580</v>
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
@@ -6339,11 +6339,11 @@
                     </o>
                     <o>
                       <v n="Id">550940142L</v>
-                      <v n="Value">575</v>
+                      <v n="Value">255</v>
                     </o>
                     <o>
                       <v n="Id">1473355128L</v>
-                      <v n="Value">280</v>
+                      <v n="Value">600</v>
                     </o>
                     <o>
                       <v n="Id">2678395525L</v>
@@ -7214,12 +7214,12 @@
           <o n="TextDocument" t="TextDocument">
             <a n="TextLines" cet="TextLine">
               <o>
-                <v n="Id">6L</v>
+                <v n="Id">8L</v>
                 <n n="Tag" />
                 <v n="Text">"VAR_IN_OUT"</v>
               </o>
               <o>
-                <v n="Id">7L</v>
+                <v n="Id">9L</v>
                 <n n="Tag" />
                 <v n="Text">"	"</v>
               </o>
@@ -7247,13 +7247,13 @@
             <d2 n="Size" ckt="Int32" cvt="VisualObjectSize">
               <v>0</v>
               <o>
-                <v n="Width">630</v>
-                <v n="Height">520</v>
+                <v n="Width">511</v>
+                <v n="Height">630</v>
               </o>
               <v>1</v>
               <o>
-                <v n="Width">631</v>
-                <v n="Height">521</v>
+                <v n="Width">512</v>
+                <v n="Height">631</v>
               </o>
             </d2>
             <v n="Version">1</v>

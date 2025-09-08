@@ -2,8 +2,6 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="MAIN" Id="{f4259ffe-1174-43f5-b5e0-a37a269528be}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
-// LAMPARA
-//
 // 1. Lampara asignada - la lampara "copia" el estado del pulsador
 // 2. Lampara memoriazada - un pulsador enciende la lampara y otro la apaga
 // 3. Lampara conmutada - el mismo pulsador enciende y apaga la lampara
@@ -16,36 +14,38 @@
 VAR
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
-
-//    LamparaAsignada: FB_LamparaAsignada_IL;
-//    LamparaMemorizada: FB_LamparaMemorizada_IL;
-//    LamparaConmutada: FB_LamparaConmutada_IL;
-//    LamparaTemporizada: FB_LamparaTemporizada_IL;
-//    LamparaIntermitente: FB_LamparaIntermitente_IL;
-//    LamparaComputada: FB_LamparaComputada_IL;
-
-//    LamparaAsignada: FB_LamparaAsignada_LD;
-//    LamparaMemorizada: FB_LamparaMemorizada_LD;
-//    LamparaConmutada: FB_LamparaConmutada_LD;
-//    LamparaTemporizada: FB_LamparaTemporizada_LD;
-//    LamparaIntermitente: FB_LamparaIntermitente_LD;
-//    LamparaComputada: FB_LamparaComputada_LD;
-    
+// Definir lo que corresponda {LENGUAJE_IL, LENGUAJE_LD, LENGUAJE_ST, LENGUAJE_SFC}
+{define LENGUAJE_ST}
+{IF defined(LENGUAJE_IL)}
+    LamparaAsignada: FB_LamparaAsignada_IL;
+    LamparaMemorizada: FB_LamparaMemorizada_IL;
+    LamparaConmutada: FB_LamparaConmutada_IL;
+    LamparaTemporizada: FB_LamparaTemporizada_IL;
+    LamparaIntermitente: FB_LamparaIntermitente_IL;
+    LamparaComputada: FB_LamparaComputada_IL;
+{ELSIF defined(LENGUAJE_LD)}
+    LamparaAsignada: FB_LamparaAsignada_LD;
+    LamparaMemorizada: FB_LamparaMemorizada_LD;
+    LamparaConmutada: FB_LamparaConmutada_LD;
+    LamparaTemporizada: FB_LamparaTemporizada_LD;
+    LamparaIntermitente: FB_LamparaIntermitente_LD;
+    LamparaComputada: FB_LamparaComputada_LD;
+{ELSIF defined(LENGUAJE_ST)}
     LamparaAsignada: FB_LamparaAsignada_ST;
     LamparaMemorizada: FB_LamparaMemorizada_ST;
     LamparaConmutada: FB_LamparaConmutada_ST;
     LamparaTemporizada: FB_LamparaTemporizada_ST_3;
     LamparaIntermitente: FB_LamparaIntermitente_ST;
     LamparaComputada: FB_LamparaComputada_ST;
-
-//    LamparaAsignada: FB_LamparaAsignada_SFC;
-//    LamparaMemorizada: FB_LamparaMemorizada_SFC;
-//    LamparaConmutada: FB_LamparaConmutada_SFC;
-//    LamparaTemporizada: FB_LamparaTemporizada_SFC;
-//    LamparaIntermitente: FB_LamparaIntermitente_SFC;   
-//    LamparaComputada: FB_LamparaComputada_SFC; 
+{ELSIF defined(LENGUAJE_SFC)}
+    LamparaAsignada: FB_LamparaAsignada_SFC;
+    LamparaMemorizada: FB_LamparaMemorizada_SFC;
+    LamparaConmutada: FB_LamparaConmutada_SFC;
+    LamparaTemporizada: FB_LamparaTemporizada_SFC;
+    LamparaIntermitente: FB_LamparaIntermitente_SFC_2;
+    LamparaComputada: FB_LamparaComputada_SFC;
+{END_IF}
 END_VAR
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Lampara := Pulsador;

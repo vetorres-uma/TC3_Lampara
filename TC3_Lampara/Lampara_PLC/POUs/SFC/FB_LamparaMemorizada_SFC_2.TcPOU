@@ -2,10 +2,8 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaMemorizada_SFC_2" Id="{5dc7e891-deec-46d2-bf0e-dc9d2fcd12ee}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaMemorizada_SFC_2
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+// La lampara se enciende al accionar el pulsador de conexion
+// La lampara se apaga al accionar el pulsador de desconexion
 VAR
     Lampara AT %Q*: BOOL;
     PulsadorConexion AT %I*: BOOL;

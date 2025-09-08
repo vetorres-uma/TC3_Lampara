@@ -1,14 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
-  <POU Name="FB_LamparaConmutada_IL" Id="{4fae365c-fc76-4aae-81b4-957177e5a0b8}" SpecialFunc="None">
+  <POU Name="FB_LamparaConmutada_IL" Id="{d1f54643-18b5-49e5-aa32-f8470987967d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaConmutada_IL
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+// La lampara se enciende si estando apagada se acciona el pulsador
+// La lampara se apaga si estando encendida se acciona el pulsador
 VAR
     Pulsacion: R_TRIG;
-
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
 END_VAR

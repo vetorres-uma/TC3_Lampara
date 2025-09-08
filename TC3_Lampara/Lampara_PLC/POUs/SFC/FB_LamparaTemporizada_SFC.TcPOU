@@ -2,12 +2,14 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaTemporizada_SFC" Id="{9fc26670-06c3-48c6-bf53-687a17a3ed03}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_SFC
+// La lampara se enciende al accionar el pulsador
+// La lampara se apaga transcurrido un tiempo encendida
 VAR_INPUT
-    TiempoEncendido: REAL := 2.0;
-    IncrementoTiempo: REAL := 1;    
+    TiempoEncendido: TIME := T#2S;
+    IncrementoTiempo: TIME := T#1S;
 END_VAR
 VAR_OUTPUT
-    TiempoPendiente: REAL;
+    TiempoPendiente: TIME;
 END_VAR
 VAR
     Lampara AT %Q*: BOOL;
@@ -383,7 +385,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S1.t &gt;= REAL_TO_TIME(1000*TiempoEncendido) "</v>
+                            <v n="Value">"S1.t &gt;= TiempoEncendido "</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">46L</v>
@@ -798,7 +800,7 @@ END_VAR
     </Implementation>
     <Action Name="S1_active" Id="{6203564d-ab62-43c5-974f-a3b810bc5fc3}">
       <Implementation>
-        <ST><![CDATA[TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(S1.t)/1000);
+        <ST><![CDATA[TiempoPendiente := TiempoEncendido - S1.t;
 ]]></ST>
       </Implementation>
     </Action>

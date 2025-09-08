@@ -16,6 +16,16 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"629"</v>
+              <v n="TextDefault">"%t[ss:ms]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"152"</v>
+              <v n="TextDefault">"%t[ss]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"948"</v>
               <v n="TextDefault">"Apaga"</v>
               <l n="LanguageTexts" t="ArrayList" />

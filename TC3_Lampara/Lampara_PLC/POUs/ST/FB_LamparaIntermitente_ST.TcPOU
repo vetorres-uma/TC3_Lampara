@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
-  <POU Name="FB_LamparaIntermitente_ST" Id="{7f416586-9ed3-4871-ac4a-b51ce99a1639}" SpecialFunc="None">
+  <POU Name="FB_LamparaIntermitente_ST" Id="{558a93e3-8cb7-48c2-9109-65a38d8c0981}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaIntermitente_ST
+// La lampara parpadea de forma continua
 VAR_INPUT
-    TiempoParpadeo: REAL := 0.5;
-END_VAR
-VAR_OUTPUT
+    TiempoParpadeo: TIME := T#500MS;
 END_VAR
 VAR
     Temporizador: TON;
-
     Lampara AT %Q*: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[Temporizador(
-    IN := NOT Temporizador.Q, 
-    PT := REAL_TO_TIME(TiempoParpadeo * 1000)
+      <ST><![CDATA[// Temporizador auto-pilotado
+Temporizador(
+    IN := NOT Temporizador.Q,
+    PT := TiempoParpadeo
     );
 
+// Salida conmutada
 IF Temporizador.Q THEN
     Lampara := NOT Lampara;
-END_IF    
+END_IF;
 ]]></ST>
     </Implementation>
   </POU>

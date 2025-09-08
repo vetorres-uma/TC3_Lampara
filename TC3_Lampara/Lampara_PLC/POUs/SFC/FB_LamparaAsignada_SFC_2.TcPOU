@@ -2,10 +2,7 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaAsignada_SFC_2" Id="{bb4f7988-95ce-42ce-b8e0-58fe48877932}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaAsignada_SFC_2
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+// La lampara se enciende mientras se acciona el pulsador
 VAR
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;

@@ -2,12 +2,12 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaIntermitente_SFC" Id="{ac299db4-ecb1-4502-977d-f799e68f966d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaIntermitente_SFC
+// La lampara parpadea de forma continua
 VAR_INPUT
-    TiempoParpadeo: REAL := 0.5;
-END_VAR
-VAR_OUTPUT
+    TiempoParpadeo: TIME := T#500MS;
 END_VAR
 VAR
+    TiempoAnterior: TIME;
     Lampara AT %Q*: BOOL;
 END_VAR
 ]]></Declaration>
@@ -143,7 +143,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S0.t &gt;= REAL_TO_TIME(1000*TiempoParpadeo)"</v>
+                            <v n="Value">"FALSE"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">23L</v>
@@ -557,8 +557,9 @@ END_VAR
     </Implementation>
     <Action Name="S0_active" Id="{eb69edbe-c575-4d2f-8b2f-5d305df408c8}">
       <Implementation>
-        <ST><![CDATA[IF (S0.t > REAL_TO_TIME(1000*TiempoParpadeo)) THEN
+        <ST><![CDATA[IF S0.t - TiempoAnterior > TiempoParpadeo THEN
     Lampara := NOT Lampara;
+    TiempoAnterior := S0.t;
 END_IF
 
 ]]></ST>

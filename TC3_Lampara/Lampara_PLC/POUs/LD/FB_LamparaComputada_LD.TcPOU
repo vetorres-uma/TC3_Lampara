@@ -2,6 +2,8 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaComputada_LD" Id="{41ef2a50-6ccd-433b-b47c-8214546b0362}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaComputada_LD
+// La lampara se enciende tras un determinado numero de pulsaciones
+// La lampara se apaga tras accionar el pulsador de reinicio
 VAR_INPUT
     ManiobrasTotales: UINT := 2;
 END_VAR
@@ -10,7 +12,6 @@ VAR_OUTPUT
 END_VAR
 VAR
     Contador: CTD := (CV := ManiobrasTotales);
-
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
     PulsadorReinicio AT %I*: BOOL;

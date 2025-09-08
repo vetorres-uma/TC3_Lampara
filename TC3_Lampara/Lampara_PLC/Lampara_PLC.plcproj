@@ -16,6 +16,7 @@
     <Implicit_KindOfTask>{6047d883-2f51-4eaa-bf17-2e748fca076a}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{8ac8ea44-46f6-4b5d-8848-27573f0f3acf}</Implicit_Jitter_Distribution>
     <LibraryReferences>{12e9ed3c-e5a8-4de4-8ef0-cb15f00fb0d5}</LibraryReferences>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GlobalTextList.TcGTLO">
@@ -61,6 +62,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\LD\FB_LamparaMemorizada_LD.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LD\FB_LamparaMemorizada_LD_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\LD\FB_LamparaTemporizada_LD.TcPOU">

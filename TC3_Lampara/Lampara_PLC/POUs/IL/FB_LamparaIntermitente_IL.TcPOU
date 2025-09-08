@@ -1,18 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
-  <POU Name="FB_LamparaIntermitente_IL" Id="{0dd6cd0c-90e5-4376-a460-9874ab4e4f58}" SpecialFunc="None">
+  <POU Name="FB_LamparaIntermitente_IL" Id="{ce178025-ba9a-4fc2-92f6-70b394b9bdde}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaIntermitente_IL
+// La lampara parpadea de forma continua
 VAR_INPUT
-    TiempoParpadeo: REAL := 0.5;
-END_VAR
-VAR_OUTPUT
+    TiempoParpadeo: TIME := T#500MS;
 END_VAR
 VAR
     Temporizador: TON;
-    
-    Resultado: REAL;
-    Tiempo: TIME;
-
     Lampara AT %Q*: BOOL;
 END_VAR
 ]]></Declaration>
@@ -24,166 +19,6 @@ END_VAR
               <v n="NetworkListComment">""</v>
               <v n="DefaultViewMode">"Il"</v>
               <l2 n="NetworkList" cet="Network">
-                <o>
-                  <v n="ILActive">true</v>
-                  <v n="FBDValid">false</v>
-                  <v n="ILValid">false</v>
-                  <l2 n="ILLines" cet="ILStatement">
-                    <o>
-                      <v n="Operator">"LD"</v>
-                      <v n="Prefix">""</v>
-                      <o n="Operand" t="Operand">
-                        <v n="Operand">"TiempoParpadeo"</v>
-                        <v n="Type">"REAL"</v>
-                        <v n="Comment">""</v>
-                        <v n="SymbolComment">""</v>
-                        <v n="Address">""</v>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">false</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <v n="LValue">false</v>
-                        <v n="Boolean">false</v>
-                        <v n="IsInstance">false</v>
-                        <v n="Id">113L</v>
-                      </o>
-                      <v n="Postfix">""</v>
-                      <v n="Id">112L</v>
-                    </o>
-                    <o>
-                      <v n="Operator">"MUL"</v>
-                      <v n="Prefix">""</v>
-                      <o n="Operand" t="Operand">
-                        <v n="Operand">"1000"</v>
-                        <v n="Type">"INT"</v>
-                        <v n="Comment">""</v>
-                        <v n="SymbolComment">""</v>
-                        <v n="Address">""</v>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">false</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <v n="LValue">false</v>
-                        <v n="Boolean">false</v>
-                        <v n="IsInstance">false</v>
-                        <v n="Id">115L</v>
-                      </o>
-                      <v n="Postfix">""</v>
-                      <v n="Id">114L</v>
-                    </o>
-                    <o>
-                      <v n="Operator">"ST"</v>
-                      <v n="Prefix">""</v>
-                      <o n="Operand" t="Operand">
-                        <v n="Operand">"Resultado"</v>
-                        <v n="Type">"REAL"</v>
-                        <v n="Comment">""</v>
-                        <v n="SymbolComment">""</v>
-                        <v n="Address">""</v>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">false</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <v n="LValue">false</v>
-                        <v n="Boolean">false</v>
-                        <v n="IsInstance">false</v>
-                        <v n="Id">117L</v>
-                      </o>
-                      <v n="Postfix">""</v>
-                      <v n="Id">116L</v>
-                    </o>
-                  </l2>
-                  <v n="Comment">""</v>
-                  <v n="Title">""</v>
-                  <v n="Label">""</v>
-                  <v n="OutCommented">false</v>
-                  <l2 n="NetworkItems" />
-                  <l2 n="Connectors" />
-                  <v n="Id">111L</v>
-                </o>
-                <o>
-                  <v n="ILActive">true</v>
-                  <v n="FBDValid">false</v>
-                  <v n="ILValid">false</v>
-                  <l2 n="ILLines" cet="ILStatement">
-                    <o>
-                      <v n="Operator">"LD"</v>
-                      <v n="Prefix">""</v>
-                      <o n="Operand" t="Operand">
-                        <v n="Operand">"Resultado"</v>
-                        <v n="Type">"REAL"</v>
-                        <v n="Comment">""</v>
-                        <v n="SymbolComment">""</v>
-                        <v n="Address">""</v>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">false</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <v n="LValue">false</v>
-                        <v n="Boolean">false</v>
-                        <v n="IsInstance">false</v>
-                        <v n="Id">120L</v>
-                      </o>
-                      <v n="Postfix">""</v>
-                      <v n="Id">119L</v>
-                    </o>
-                    <o>
-                      <v n="Operator">"REAL_TO_TIME"</v>
-                      <v n="Prefix">""</v>
-                      <o n="Operand" t="Operand">
-                        <v n="Operand">""</v>
-                        <v n="Type">""</v>
-                        <v n="Comment">""</v>
-                        <v n="SymbolComment">""</v>
-                        <v n="Address">""</v>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">false</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <v n="LValue">false</v>
-                        <v n="Boolean">false</v>
-                        <v n="IsInstance">false</v>
-                        <v n="Id">122L</v>
-                      </o>
-                      <v n="Postfix">""</v>
-                      <v n="Id">121L</v>
-                    </o>
-                    <o>
-                      <v n="Operator">"ST"</v>
-                      <v n="Prefix">""</v>
-                      <o n="Operand" t="Operand">
-                        <v n="Operand">"Tiempo"</v>
-                        <v n="Type">"TIME"</v>
-                        <v n="Comment">""</v>
-                        <v n="SymbolComment">""</v>
-                        <v n="Address">""</v>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">false</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <v n="LValue">false</v>
-                        <v n="Boolean">false</v>
-                        <v n="IsInstance">false</v>
-                        <v n="Id">124L</v>
-                      </o>
-                      <v n="Postfix">""</v>
-                      <v n="Id">123L</v>
-                    </o>
-                  </l2>
-                  <v n="Comment">""</v>
-                  <v n="Title">""</v>
-                  <v n="Label">""</v>
-                  <v n="OutCommented">false</v>
-                  <l2 n="NetworkItems" />
-                  <l2 n="Connectors" />
-                  <v n="Id">118L</v>
-                </o>
                 <o>
                   <v n="ILActive">true</v>
                   <v n="FBDValid">false</v>
@@ -237,7 +72,7 @@ END_VAR
                       <v n="Operator">"PT"</v>
                       <v n="Prefix">":="</v>
                       <o n="Operand" t="Operand">
-                        <v n="Operand">"Tiempo"</v>
+                        <v n="Operand">"TiempoParpadeo"</v>
                         <v n="Type">"TIME"</v>
                         <v n="Comment">""</v>
                         <v n="SymbolComment">""</v>
@@ -256,7 +91,8 @@ END_VAR
                       <v n="Id">175L</v>
                     </o>
                   </l2>
-                  <v n="Comment">""</v>
+                  <v n="Comment">"Temporizador auto-pilotado
+"</v>
                   <v n="Title">""</v>
                   <v n="Label">""</v>
                   <v n="OutCommented">false</v>
@@ -372,7 +208,7 @@ END_VAR
                       <v n="Id">193L</v>
                     </o>
                   </l2>
-                  <v n="Comment">""</v>
+                  <v n="Comment">"Salida conmutada"</v>
                   <v n="Title">""</v>
                   <v n="Label">""</v>
                   <v n="OutCommented">false</v>

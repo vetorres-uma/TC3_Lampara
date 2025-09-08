@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
-  <POU Name="FB_LamparaMemorizada_ST" Id="{0354aed3-5461-4991-a04b-d00e3b16aefe}" SpecialFunc="None">
+  <POU Name="FB_LamparaMemorizada_ST" Id="{c5b457af-eab2-4eba-8e3c-68d932391f11}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaMemorizada_ST
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+// La lampara se enciende al accionar el pulsador de conexion
+// La lampara se apaga al accionar el pulsador de desconexion
 VAR
     Lampara AT %Q*: BOOL;
     PulsadorConexion AT %I*: BOOL;
@@ -17,7 +15,7 @@ END_VAR
     Lampara := FALSE;
 ELSIF PulsadorConexion THEN
     Lampara := TRUE;
-END_IF]]></ST>
+END_IF;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

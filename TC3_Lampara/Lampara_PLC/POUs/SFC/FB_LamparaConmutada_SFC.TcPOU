@@ -2,13 +2,10 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_LamparaConmutada_SFC" Id="{627d8519-ef3d-4358-89ad-fa30f84c70ba}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaConmutada_SFC
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+// La lampara se enciende tras un determinado numero de pulsaciones
+// La lampara se apaga tras accionar el pulsador de reinicio
 VAR
     Pulsacion: R_TRIG;
-
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
 END_VAR

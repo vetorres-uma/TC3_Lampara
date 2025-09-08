@@ -8,7 +8,7 @@ VAR_INPUT
     IncrementoTiempo: TIME := T#1S;
 END_VAR
 VAR_OUTPUT
-    TiempoPendiente: REAL;
+    TiempoPendiente: TIME;
 END_VAR
 VAR
     Lampara AT %Q*: BOOL;
@@ -348,7 +348,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S1_active"</v>
+                            <v n="Value">"a_TiempoPendiente_Actualizar"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">42L</v>
@@ -1018,10 +1018,9 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="S1_active" Id="{8c1dae8b-8d82-4667-9fe1-df21a82429c1}">
+    <Action Name="a_TiempoPendiente_Actualizar" Id="{8c1dae8b-8d82-4667-9fe1-df21a82429c1}">
       <Implementation>
-        <ST><![CDATA[TiempoPendiente := TiempoEncendido - (TIME_TO_REAL(S1.t)/1000);
-
+        <ST><![CDATA[TiempoPendiente := TiempoEncendido - S1.t;
 ]]></ST>
       </Implementation>
     </Action>

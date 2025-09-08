@@ -13,7 +13,6 @@
 		</System>
 		<Plc>
 			<Project File="Lampara_PLC.xti"/>
-			<Project File="PLC_Lampara_Ext.xti"/>
 		</Plc>
 	</Project>
 </TcSmProject>

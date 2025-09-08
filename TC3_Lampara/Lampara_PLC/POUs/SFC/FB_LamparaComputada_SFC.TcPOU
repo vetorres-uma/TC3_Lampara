@@ -113,7 +113,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S0_active"</v>
+                            <v n="Value">"a_Pulsador"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">19L</v>
@@ -305,7 +305,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{a6b08bd8-b696-47e3-9cbf-7408b61c9ff8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S1_entry"</v>
+                            <v n="Value">"am_ManiobrasPendientes_Decrementar"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">43L</v>
@@ -771,7 +771,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{a2621e18-7de3-4ea6-ae6d-89e9e0b7befd}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S2_exit"</v>
+                            <v n="Value">"am_ManiobrasPendientes_Iniciar"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">286L</v>
@@ -1203,20 +1203,20 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="S0_active" Id="{2e47c035-9f95-4cbc-94d9-bf2b2c727cb0}">
+    <Action Name="a_Pulsador" Id="{2e47c035-9f95-4cbc-94d9-bf2b2c727cb0}">
       <Implementation>
         <ST><![CDATA[FlancoPulsador(CLK := Pulsador);
 ]]></ST>
       </Implementation>
     </Action>
-    <Action Name="S1_entry" Id="{290c5996-f693-446c-9961-0761e0f5c222}">
+    <Action Name="am_ManiobrasPendientes_Decrementar" Id="{290c5996-f693-446c-9961-0761e0f5c222}">
       <Implementation>
         <ST><![CDATA[IF (ManiobrasPendientes > 0) THEN 
     ManiobrasPendientes := ManiobrasPendientes - 1;
-END_IF]]></ST>
+END_IF;]]></ST>
       </Implementation>
     </Action>
-    <Action Name="S2_exit" Id="{42b2d026-a3e6-4ae1-8c3f-a9705ef97f75}">
+    <Action Name="am_ManiobrasPendientes_Iniciar" Id="{42b2d026-a3e6-4ae1-8c3f-a9705ef97f75}">
       <Implementation>
         <ST><![CDATA[ManiobrasPendientes := ManiobrasTotales;]]></ST>
       </Implementation>

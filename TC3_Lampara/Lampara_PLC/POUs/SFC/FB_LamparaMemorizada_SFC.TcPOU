@@ -106,7 +106,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S0_active"</v>
+                            <v n="Value">"a_Lampara"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">19L</v>
@@ -554,13 +554,14 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="S0_active" Id="{2bf5d367-24ee-4b2d-946a-fc19475c8227}">
+    <Action Name="a_Lampara" Id="{2bf5d367-24ee-4b2d-946a-fc19475c8227}">
       <Implementation>
         <ST><![CDATA[IF PulsadorDesconexion THEN
     Lampara := FALSE;
 ELSIF PulsadorConexion THEN
     Lampara := TRUE;
-END_IF]]></ST>
+END_IF;
+]]></ST>
       </Implementation>
     </Action>
     <ObjectProperties>

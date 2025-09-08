@@ -104,7 +104,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S0_active"</v>
+                            <v n="Value">"ac_active"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">19L</v>
@@ -552,9 +552,9 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="S0_active" Id="{cff54ff1-6796-45ab-9e03-7da13421d66e}">
+    <Action Name="ac_active" Id="{cff54ff1-6796-45ab-9e03-7da13421d66e}">
       <Implementation>
-        <ST><![CDATA[Lampara := Pulsador;]]></ST>
+        <ST><![CDATA[Lampara := S0.x AND Pulsador;]]></ST>
       </Implementation>
     </Action>
     <ObjectProperties>

@@ -32,7 +32,7 @@ END_VAR
                               <o>
                                 <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                                 <o n="Value" t="StringValue">
-                                  <v n="Value">"aLampara"</v>
+                                  <v n="Value">"a_Lampara"</v>
                                   <v n="DefaultValue">""</v>
                                 </o>
                                 <v n="Id">63L</v>
@@ -609,13 +609,13 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="aLampara" Id="{692c89e8-9cde-44df-ba38-bfdc617d6826}">
+    <Action Name="a_Lampara" Id="{692c89e8-9cde-44df-ba38-bfdc617d6826}">
       <Implementation>
         <ST><![CDATA[Pulsacion(CLK := Pulsador);
 
 IF Pulsacion.Q THEN
     Lampara := NOT Lampara;
-END_IF
+END_IF;
 ]]></ST>
       </Implementation>
     </Action>

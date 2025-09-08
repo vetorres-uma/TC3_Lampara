@@ -15,7 +15,7 @@ VAR
     Lampara AT %Q*: BOOL;
     Pulsador AT %I*: BOOL;
 // Definir lo que corresponda {LENGUAJE_IL, LENGUAJE_LD, LENGUAJE_ST, LENGUAJE_SFC}
-{define LENGUAJE_ST}
+{define LENGUAJE_SFC}
 {IF defined(LENGUAJE_IL)}
     LamparaAsignada: FB_LamparaAsignada_IL;
     LamparaMemorizada: FB_LamparaMemorizada_IL;

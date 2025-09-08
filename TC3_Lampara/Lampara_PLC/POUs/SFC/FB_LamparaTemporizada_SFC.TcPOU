@@ -349,7 +349,7 @@ END_VAR
                         <o>
                           <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                           <o n="Value" t="StringValue">
-                            <v n="Value">"S1_active"</v>
+                            <v n="Value">"a_TiempoPendiente_Actualizar"</v>
                             <v n="DefaultValue">""</v>
                           </o>
                           <v n="Id">42L</v>
@@ -798,7 +798,7 @@ END_VAR
         </XmlArchive>
       </SFC>
     </Implementation>
-    <Action Name="S1_active" Id="{6203564d-ab62-43c5-974f-a3b810bc5fc3}">
+    <Action Name="a_TiempoPendiente_Actualizar" Id="{6203564d-ab62-43c5-974f-a3b810bc5fc3}">
       <Implementation>
         <ST><![CDATA[TiempoPendiente := TiempoEncendido - S1.t;
 ]]></ST>

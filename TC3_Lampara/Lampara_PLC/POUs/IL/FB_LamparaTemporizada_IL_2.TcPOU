@@ -4,16 +4,16 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaTemporizada_IL_2
 // Lampara temporizada con tiempo de espera prolongado
 VAR_INPUT
-    TiempoEncendido: TIME := T#2S;
-    IncrementoTiempo: TIME := T#1S; // Declarado por compatibilidad
+    TiempoEncendido   : TIME := T#2S;
+    IncrementoTiempo  : TIME := T#1S; // Declarado por compatibilidad
 END_VAR
 VAR_OUTPUT
-    TiempoPendiente: TIME;
+    TiempoPendiente   : TIME;
 END_VAR
 VAR
-    Temporizador: TON;
-    Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;    
+    Temporizador      : TON;
+    Lampara   AT %Q*  : BOOL;
+    Pulsador  AT %I*  : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -114,7 +114,7 @@ END_VAR
                       <v n="Prefix">""</v>
                       <o n="Operand" t="Operand">
                         <v n="Operand">"TiempoEncendido"</v>
-                        <v n="Type">"REAL"</v>
+                        <v n="Type">"TIME"</v>
                         <v n="Comment">""</v>
                         <v n="SymbolComment">""</v>
                         <v n="Address">""</v>
@@ -136,7 +136,7 @@ END_VAR
                       <v n="Prefix">""</v>
                       <o n="Operand" t="Operand">
                         <v n="Operand">"Temporizador.ET"</v>
-                        <v n="Type">"REAL"</v>
+                        <v n="Type">"TIME"</v>
                         <v n="Comment">""</v>
                         <v n="SymbolComment">""</v>
                         <v n="Address">""</v>
@@ -158,7 +158,7 @@ END_VAR
                       <v n="Prefix">""</v>
                       <o n="Operand" t="Operand">
                         <v n="Operand">"TiempoPendiente"</v>
-                        <v n="Type">"REAL"</v>
+                        <v n="Type">"TIME"</v>
                         <v n="Comment">""</v>
                         <v n="SymbolComment">""</v>
                         <v n="Address">""</v>

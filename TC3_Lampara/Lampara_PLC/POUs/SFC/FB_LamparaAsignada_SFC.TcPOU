@@ -4,8 +4,8 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_LamparaAsignada_SFC
 // La lampara se enciende mientras se acciona el pulsador
 VAR
-    Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;
+    Lampara   AT %Q*  : BOOL;
+    Pulsador  AT %I*  : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>

@@ -5,25 +5,26 @@
 // La lampara se enciende tras un determinado numero de pulsaciones
 // La lampara se apaga tras accionar el pulsador de reinicio
 VAR_INPUT
-    ManiobrasTotales: UINT := 2;
+    ManiobrasTotales     : UINT := 2;
 END_VAR
 VAR_OUTPUT
-    ManiobrasPendientes: UINT;
+    ManiobrasPendientes  : UINT;
 END_VAR
 VAR
-    Contador: CTD := (CV := ManiobrasTotales);
-    Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;
-    PulsadorReinicio AT %I*: BOOL;
+    Contador  : CTD := (CV := ManiobrasTotales);
+    
+    Lampara           AT %Q*  : BOOL;
+    Pulsador          AT %I*  : BOOL;
+    PulsadorReinicio  AT %I*  : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Contador(
-    CD := Pulsador,
+    CD   := Pulsador,
     LOAD := PulsadorReinicio,
-    PV := ManiobrasTotales,
-    Q => Lampara,
-    CV => ManiobrasPendientes
+    PV   := ManiobrasTotales,
+    Q    => Lampara,
+    CV   => ManiobrasPendientes
     );
 ]]></ST>
     </Implementation>

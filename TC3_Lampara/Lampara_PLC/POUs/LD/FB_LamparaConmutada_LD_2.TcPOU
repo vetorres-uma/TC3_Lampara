@@ -5,10 +5,10 @@
 // La lampara se enciende si estando apagada se acciona el pulsador
 // La lampara se apaga si estando encendida se acciona el pulsador
 VAR
-    Pulsacion: R_TRIG;
-    MemoriaLampara: BOOL;
-    Lampara AT %Q*: BOOL;
-    Pulsador AT %I*: BOOL;
+    Pulsacion         : R_TRIG;
+    MemoriaLampara    : BOOL;
+    Lampara   AT %Q*  : BOOL;
+    Pulsador  AT %I*  : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>

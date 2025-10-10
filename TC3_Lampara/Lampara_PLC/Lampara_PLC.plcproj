@@ -136,7 +136,7 @@
     <Compile Include="Visualization Manager.TcVMO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="VISUs\Visualizacion.TcVIS">
+    <Compile Include="VISUs\VisuLampara.TcVIS">
       <SubType>Code</SubType>
       <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
     </Compile>

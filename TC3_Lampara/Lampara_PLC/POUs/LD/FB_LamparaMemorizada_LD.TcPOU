@@ -5,9 +5,9 @@
 // La lampara se enciende al accionar el pulsador de conexion
 // La lampara se apaga al accionar el pulsador de desconexion
 VAR
-    Lampara AT %Q*: BOOL;
-    PulsadorConexion AT %I*: BOOL;
-    PulsadorDesconexion AT %I*: BOOL;
+    Lampara              AT %Q*  : BOOL;
+    PulsadorConexion     AT %I*  : BOOL;
+    PulsadorDesconexion  AT %I*  : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>

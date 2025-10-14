@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
-  <Visu Name="VisuLampara" Id="{9c96670d-5611-45f7-b475-36643b25dd97}">
+  <Visu Name="VISU_Lampara" Id="{9c96670d-5611-45f7-b475-36643b25dd97}">
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="VisualObject">

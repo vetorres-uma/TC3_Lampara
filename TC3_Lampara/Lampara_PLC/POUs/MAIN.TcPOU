@@ -2,22 +2,42 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="MAIN" Id="{f4259ffe-1174-43f5-b5e0-a37a269528be}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
-// LAMPARA
-//
-// Modalidades
-// 1. Lampara asignada     - la lampara "copia" el estado del pulsador
-// 2. Lampara memoriazada  - un pulsador enciende la lampara y otro la apaga
-// 3. Lampara conmutada    - el mismo pulsador enciende y apaga la lampara
-// 4. Lampara temporizada  - la lampara se apaga transcurrido un cierto tiempo
-//                           despues de accionar el pulsador
-// 5. Lampara intermitente - la lampara parpadea
-// 6. Lampara computada    - la lampara se enciende tras accionar varias veces el 
-//                           pulsador y se apaga al accionar el pulsador de reinicio
-//
-// Version 1.0
-// copyright (c) 2003-2025 Victor Torres
-// GNU General Public License
-
+(*
+ * =================================================================================
+ * POU Nombre:      MAIN
+ * File:            MAIN.TcPOU
+ * Version:         1.0.0
+ * Date:            2025-10-20
+ * Author:          Victor Torres
+ * ---------------------------------------------------------------------------------
+ * Copyright (C) 2020-2025 Victor Torres
+ * License:         GNU General Public License (GPL)
+ * This program is free software; see the file "LICENSE" for details
+ * ---------------------------------------------------------------------------------
+ * Historial de Revisiones:
+ * ------------------------
+ * 1.0.0 - 2025-10-20 - VTL: Versión inicial
+ * 0.1.0 - 2020-05-02 - VTL: Creacion
+ * =================================================================================
+ *)
+ 
+ (*!
+ * @brief MAIN: Programa Principal de TC3_Lampara
+ *
+ * @description
+ * Ejemplo sencillo para mostras el uso de los elementos fundamentales de la libreria 
+ * STANDARD del IEC 61131-3 en los diferentes lenguajes de la norma.
+ *
+ * 1. Lampara asignada     - la lampara "copia" el estado del pulsador
+ * 2. Lampara memoriazada  - un pulsador enciende la lampara y otro la apaga
+ * 3. Lampara conmutada    - el mismo pulsador enciende y apaga la lampara
+ * 4. Lampara temporizada  - la lampara se apaga transcurrido un cierto tiempo
+ *                           despues de accionar el pulsador
+ * 5. Lampara intermitente - la lampara parpadea
+ * 6. Lampara computada    - la lampara se enciende tras accionar varias veces el 
+ *                           pulsador y se apaga al accionar el pulsador de reinicio
+*)
+ 
 VAR
     Lampara   AT %Q*  : BOOL;
     Pulsador  AT %I*  : BOOL;

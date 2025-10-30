@@ -6,7 +6,6 @@
 // La lampara se apaga transcurrido un tiempo encendidaVAR_INPUT
 VAR
     TiempoEncendido   : TIME := T#2S;
-    IncrementoTiempo  : TIME := T#1S; // Declarado por compatibilidad
 END_VAR
 VAR_OUTPUT
     TiempoPendiente   : TIME;
@@ -300,19 +299,6 @@ END_VAR
                   <l2 n="NetworkItems" />
                   <l2 n="Connectors" />
                   <v n="Id">104L</v>
-                </o>
-                <o>
-                  <v n="ILActive">true</v>
-                  <v n="FBDValid">false</v>
-                  <v n="ILValid">false</v>
-                  <l2 n="ILLines" />
-                  <v n="Comment">""</v>
-                  <v n="Title">""</v>
-                  <v n="Label">""</v>
-                  <v n="OutCommented">false</v>
-                  <l2 n="NetworkItems" />
-                  <l2 n="Connectors" />
-                  <v n="Id">96L</v>
                 </o>
               </l2>
               <v n="BranchCounter">0</v>

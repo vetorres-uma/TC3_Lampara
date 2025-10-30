@@ -6,7 +6,6 @@
 // La lampara se apaga transcurrido un tiempo encendida
 VAR_INPUT
     TiempoEncendido   : TIME := T#2S;
-    IncrementoTiempo  : TIME := T#1S; // Declarado por compatibilidad
 END_VAR
 VAR_OUTPUT
     TiempoPendiente   : TIME;

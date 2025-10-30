@@ -5,8 +5,7 @@
 // Lampara temporizada con tiempo de espera prolongado
 VAR_INPUT
     TiempoEncendido   : TIME := T#2S;
-    IncrementoTiempo  : TIME := T#1S; // Declarado por compatibilidad
-END_VAR
+VAR
 VAR_OUTPUT
     TiempoPendiente   : TIME;
 END_VAR
